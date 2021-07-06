@@ -33,13 +33,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 > git clone https://github.com/ChoiJunBae/lali_playlist.git
 
-git add .*
+> git add .*
 
-git status
+> git status
 
-git commit -m "커밋 메시지 0"
+> git commit -m "커밋 메시지 0"
 
-git push origin master
+> git push origin master
 깃 변경사항 확인 
 
 
