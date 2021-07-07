@@ -1,8 +1,9 @@
-<template>
+<template id="weatherAll">
   <div id="app2" :class="typeof weather.main !='undefined' && Math.round(weather.main.temp) > 16 ? 'warm' : ''">
     <main>
-      <div class="search-box"><input type="text" class="search-bar" placeholder="현재 위치하신 도시를 입력하시오..." v-model="query"
-                                     @keypress="fetchWeather"/></div>
+      <div class="search-box">
+        <input type="text" class="search-bar" placeholder="write your location" v-model="query" @keypress="fetchWeather"/>
+      </div>
       <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
         <div class="location-box">
           <div class="location">{{ weather.name }}, {{ weather.sys.country }}</div>
@@ -49,10 +50,12 @@
     },
   },
 }; </script>
-<style> * {
+<style>
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 body {
@@ -60,7 +63,7 @@ body {
 }
 
 #app2 {
-
+  border-radius: 10px;
   background-image: url("../assets/cold.jpg");
   background-size: cover;
   background-position: bottom;
@@ -79,21 +82,27 @@ main {
 
 .search-box {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
+}
+
+.search-bar{
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  right: 25%;
 }
 
 .search-box .search-bar {
   display: block;
-  width: 100%;
   padding: 15px;
-  color: #313131;
+  color: #8E24AA;
   font-size: 20px;
   appearance: none;
   border: none;
   outline: none;
   background: none;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 0px 16px 0px 16px;
   transition: 0.4s;
 }
@@ -103,6 +112,7 @@ main {
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 16px 0px 16px 0px;
 }
+
 
 .location-box .location {
   color: #fff;
