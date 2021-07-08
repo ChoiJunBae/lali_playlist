@@ -173,15 +173,19 @@
 
 export default {
   name: 'App',
+  
   components: {},
   data: () => ({
     drawer: false,
     gradient: 'rgba(255,255,255, .7), rgba(0,0,0, .7)',
     items: [
       {title: 'Weather', icon: 'mdi-weather-hazy', to: '/'},
+      {title: 'WeaterTest', icon: 'mdi-weather-hazy', to:'/weathertest'},
       {title: 'Lali recommend', icon: 'mdi-star', to: '/recommend'},
       {title: 'Add PlayList', icon: 'mdi-playlist-plus', to: '/create'},
-      {title: 'Check PlayList', icon: 'mdi-playlist-check', to: '/check'}
+      {title: 'Check PlayList', icon: 'mdi-playlist-check', to: '/check'},
+      {title: 'Chart', icon: 'mdi-playlist-check', to: '/chart'},
+
     ],
     right: null,
   }),
